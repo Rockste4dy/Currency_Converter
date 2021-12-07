@@ -1,1 +1,1 @@
-web: gunicorn cu
+web: gunicorn currency_converter.wsgi
