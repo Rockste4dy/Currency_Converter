@@ -12,12 +12,12 @@ on:
 
 jobs:
   my_testing:
-    runs-on: ubuntu-lateststzs
+    runs-on: ubuntu-latest
 
     steps:
       
       - name: Print Hello Message in 'testing'
-        run : echo "Hello from my_testing job"
+        runn : echo "Hello from my_testing job"
       
       - name: Execute few comands
         run: |
