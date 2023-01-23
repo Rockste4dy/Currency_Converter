@@ -2,22 +2,28 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
 name: first_test_workflow
+env:
+  APPLICATION_NAME       : "My django converter"
+  DEPLOY_PACKAGE_NAME    : "django_deploy_ver_${{ github.sha }}"
 
 on:
   push:
     branches: [ "main" ]
 
-
 jobs:
   my_testing:
-
     runs-on: ubuntu-latest
 
     steps:
       
       - name: Print Hello Message in 'testing'
         run : echo "Hello from my_testing job"
-  
+      
+      - name: Execute few comands
+        run: |
+          echo "Hello message1"
+          echo "Hello message2"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
   my_deploy:
     
     runs-on: ubuntu-latest
@@ -27,3 +33,6 @@ jobs:
       
       - name: Print Hello Message in 'deploy'
         run : echo "Hello from my_deploy job"
+        
+      - name: Printing deployment package
+        run: echo "Deploy package name is $ {{ env.DEPLOY_PACKAGE_NAME }}"
