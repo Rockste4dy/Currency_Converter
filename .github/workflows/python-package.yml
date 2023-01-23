@@ -17,7 +17,7 @@ jobs:
     steps:
       
       - name: Print Hello Message in 'testing'
-        runn : echo "Hello from my_testing job"
+        run : echo "Hello from my_testing job"
       
       - name: Execute few comands
         run: |
