@@ -13,3 +13,9 @@ Installation for users who used MacOS | Linux:
 8. Make migrations: python manage.py migrate
 9. Run server: python manage.py runserver
 10. Open your browser and go to: http://127.0.0.1:8000
+
+
+
+
+Last deployment status: <br>
+<img src="https://github.com/Rockste4dy/Currency_Converter/workflows/first_test_workflow/badge.svg?branch=main"><br>
